@@ -9,7 +9,7 @@ Utilizei o Framework Puppeteer para raspar os dados do JS path.
 ------------
 
 
-##### Da ragem da pagina home extraimos os links das proximas paginas a ser examinada:
+##### Da página home extraímos os links das próximas páginas a serem examinadas:
     function WhileUrl3 (a, b) {
                 const url3list = [];
                 const url4list = [];
