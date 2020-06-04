@@ -7,7 +7,6 @@ async function main () {
 
     await page.waitFor('input[name="dsTexto"]');
 
-    // await page.type('input[name="dsTexto"]', 'Adenosine triphosphate');
     await page.$eval('input[name="dsTexto"]', el => el.value = 'transporte');
 
     await page.click('.btn-outline-secondary[type="submit"]');
@@ -28,9 +27,6 @@ async function main () {
     }
     
     const attr = await page.$$eval("a.btn-outline-secondary.float-right", el => el.map(x => x.getAttribute("onclick")));
-
-
-    // pegar valores do onclick
 
 
     function getMaxOfArray(numArray) {
@@ -64,7 +60,6 @@ async function main () {
             };
             const url = `http://www.legislador.com.br/LegisladorWEB.ASP?WCI=ProjetoTexto&ID=${url1}&inEspecie=${url2}&nrProjeto=${getMaxOfArray(url3list)}&aaProjeto=${getMaxOfArray(url4list)}&dsVerbete=transporte`;
             return url;
-            //return console.log(url1, url2, getMaxOfArray(url3list), getMaxOfArray(url4list));
         };
 
         
